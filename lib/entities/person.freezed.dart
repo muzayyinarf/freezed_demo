@@ -21,8 +21,11 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Person {
   String get name => throw _privateConstructorUsedError;
+  set name(String value) => throw _privateConstructorUsedError;
   int get age => throw _privateConstructorUsedError;
+  set age(int value) => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
+  set password(String value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -110,41 +113,23 @@ class __$$_PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Person implements _Person {
-  const _$_Person({required this.name, this.age = 0, required this.password});
+  _$_Person({required this.name, this.age = 0, required this.password});
 
   factory _$_Person.fromJson(Map<String, dynamic> json) =>
       _$$_PersonFromJson(json);
 
   @override
-  final String name;
+  String name;
   @override
   @JsonKey()
-  final int age;
+  int age;
   @override
-  final String password;
+  String password;
 
   @override
   String toString() {
     return 'Person(name: $name, age: $age, password: $password)';
   }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Person &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.age, age) &&
-            const DeepCollectionEquality().equals(other.password, password));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(age),
-      const DeepCollectionEquality().hash(password));
 
   @JsonKey(ignore: true)
   @override
@@ -160,19 +145,20 @@ class _$_Person implements _Person {
 }
 
 abstract class _Person implements Person {
-  const factory _Person(
-      {required final String name,
-      final int age,
-      required final String password}) = _$_Person;
+  factory _Person({required String name, int age, required String password}) =
+      _$_Person;
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
   @override
   String get name;
+  set name(String value);
   @override
   int get age;
+  set age(int value);
   @override
   String get password;
+  set password(String value);
   @override
   @JsonKey(ignore: true)
   _$$_PersonCopyWith<_$_Person> get copyWith =>

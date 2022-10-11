@@ -3,9 +3,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'person.freezed.dart';
 part 'person.g.dart';
 
-@freezed
+@unfreezed //agar mutable
 class Person with _$Person {
-  const factory Person(
+  factory Person(
+      //hilangkan const
       {required String name,
       @Default(0) int age,
       required String password}) = _Person;
