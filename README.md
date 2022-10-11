@@ -1,6 +1,6 @@
 # freezed_demo
 
-A new Flutter project.
+Membuat model mutable dengan Unfreezed, Modiefiable Collection, Copy With, dan menambahkan method sendiri.
 
 ## Getting Started
 
