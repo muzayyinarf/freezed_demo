@@ -1,6 +1,6 @@
 # freezed_demo
 
-A new Flutter project.
+Project demo untuk membuat model dengan cepat.
 
 ## Getting Started
 
